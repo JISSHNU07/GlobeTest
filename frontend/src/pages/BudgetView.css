@@ -1,0 +1,74 @@
+.total-budget {
+  font-size: 48px;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.budget-breakdown {
+  margin: 20px 0;
+}
+
+.budget-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.budget-label {
+  font-weight: 500;
+}
+
+.budget-value {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.budget-chart {
+  margin-top: 30px;
+}
+
+.chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chart-item {
+  display: grid;
+  grid-template-columns: 150px 1fr 100px;
+  gap: 15px;
+  align-items: center;
+}
+
+.chart-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chart-bar-container {
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.chart-bar {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.chart-value {
+  text-align: right;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .chart-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+

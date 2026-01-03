@@ -1,0 +1,58 @@
+.city-search {
+  margin: 20px 0;
+}
+
+.city-results {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.city-result-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.city-result-item:hover {
+  background-color: #f5f5f5;
+}
+
+.city-result-item h4 {
+  margin-bottom: 5px;
+  color: #007bff;
+}
+
+.stops-list {
+  margin-top: 20px;
+}
+
+.stop-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stop-info h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.stop-info p {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.stop-actions {
+  display: flex;
+  gap: 10px;
+}
+
