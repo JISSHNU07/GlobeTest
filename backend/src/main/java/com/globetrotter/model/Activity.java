@@ -1,5 +1,6 @@
 package com.globetrotter.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -19,8 +20,10 @@ public class Activity {
 
     private String description;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city_id")
+    @JsonBackReference
     private City city;
 
     @Enumerated(EnumType.STRING)
@@ -36,6 +39,7 @@ public class Activity {
     private String imageUrl;
 
     @OneToMany(mappedBy = "activity", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonBackReference
     private List<StopActivity> stopActivities = new ArrayList<>();
 
     public Activity() {

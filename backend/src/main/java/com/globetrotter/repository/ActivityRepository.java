@@ -22,3 +22,5 @@ public interface ActivityRepository extends JpaRepository<Activity, Long> {
     List<Activity> findByCityIdAndEstimatedCostBetween(Long cityId, Double minCost, Double maxCost);
 }
 
+
+

@@ -11,3 +11,5 @@ public interface StopRepository extends JpaRepository<Stop, Long> {
     List<Stop> findByTripId(Long tripId);
 }
 
+
+

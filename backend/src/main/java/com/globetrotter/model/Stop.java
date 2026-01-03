@@ -1,5 +1,6 @@
 package com.globetrotter.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -17,10 +18,12 @@ public class Stop {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "trip_id", nullable = false)
+    @JsonBackReference
     private Trip trip;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city_id", nullable = false)
+    @JsonBackReference
     private City city;
 
     @Column(name = "arrival_date")
@@ -34,6 +37,7 @@ public class Stop {
 
     @OneToMany(mappedBy = "stop", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("time ASC")
+    @JsonBackReference
     private List<StopActivity> activities = new ArrayList<>();
 
     @Column(name = "accommodation_cost")
